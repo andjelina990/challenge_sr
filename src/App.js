@@ -9,6 +9,7 @@ import jsonData from './data.json';
 
 import Navigation from './components/Navigation/Navigation';
 import Header from './components/Header/Header';
+import Detail from './pages/Detail/Detail';
 
 export const DataContext = React.createContext(null);
 
@@ -54,6 +55,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/add-event" element={<AddEvent />} />
+          <Route path="/detail/:id" element={<Detail />} />
         </Routes>
       </DataContext.Provider>
     </div>
