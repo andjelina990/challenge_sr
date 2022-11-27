@@ -51,7 +51,7 @@ function App() {
       <Header toggleSidebar={toggleSidebar} />
 
       <Navigation />
-      <DataContext.Provider value={{ sportEvents }}>
+      <DataContext.Provider value={{ sportEvents, setSportEvents }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/add-event" element={<AddEvent />} />
