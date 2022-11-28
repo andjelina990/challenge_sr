@@ -8,19 +8,24 @@ function Overview({ event, index }) {
       <div className="card card-hover">
         <div className="box bg-cyan text-center text-white">
           <p>
-            {moment(event.dateVenue).format('ddd')} {event.dateVenue}{' '}
+            Date:{moment(event.dateVenue).format('ddd')} {event.dateVenue}{' '}
+          </p>
+          <p>
+            Time:
             {moment(event.dateVenue + ' ' + event.timeVenueUTC).format('LT')}
           </p>
           <p>
-            Home Team: {event.homeTeam?.teamCountryCode}{' '}
+            Home Team: {event.homeTeam?.teamCountryCode}
             {event.homeTeam && event.homeTeam.name}
             <span className="ms-3">
+              Goals:
               {event.homeTeam && event.awayTeam && event.result.homeGoals}
             </span>
           </p>
           <p>
             Away Team: {event.awayTeam?.teamCountryCode} {event.awayTeam?.name}
             <span className="ms-3">
+              Goals:
               {event.homeTeam && event.awayTeam && event.result.awayGoals}
             </span>
           </p>
