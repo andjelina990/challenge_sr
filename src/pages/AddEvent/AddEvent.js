@@ -231,7 +231,6 @@ function AddEvent() {
                         htmlFor="homeGoals"
                         className="col-sm-3 text-start control-label col-form-label"
                       >
-                        {' '}
                         Goals
                       </label>
                       <div className="col-sm-9">
@@ -239,6 +238,7 @@ function AddEvent() {
                           type="number"
                           className="form-control"
                           id="homeGoals"
+                          min="0"
                           name="result_homeGoals"
                           onInput={inputHandler}
                         />
@@ -317,6 +317,7 @@ function AddEvent() {
                           type="number"
                           className="form-control"
                           id="awayGoals"
+                          min="0"
                           name="result_awayGoals"
                           onInput={inputHandler}
                         />

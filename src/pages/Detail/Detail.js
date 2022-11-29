@@ -76,10 +76,19 @@ function Detail() {
               </div>
             </div>
             <div className="col-md-12">
+              <div className="alert alert-cyan text-center">
+                <span className="display-7 text-uppercase">
+                  {sportEvents[id].result.winner
+                    ? `WINNER IS ${sportEvents[id].result.winner}`
+                    : 'NO WINNER'}
+                </span>
+              </div>
+            </div>
+            <div className="col-md-12">
               <div className="alert alert-info" role="alert">
                 <div className="row">
                   <div className="col-md-3">
-                    <p>Golas:</p>
+                    <p>Goals:</p>
                     <ul>
                       {sportEvents[id].result.goals.map((goal, index) => (
                         <li key={index}>{goal}</li>
@@ -95,7 +104,7 @@ function Detail() {
                     </ul>
                   </div>
                   <div className="col-md-3">
-                    <p>Seccond Yellow Cards:</p>
+                    <p>Second Yellow Cards:</p>
                     <ul>
                       {sportEvents[id].result.secondYellowCards.map(
                         (card, index) => (

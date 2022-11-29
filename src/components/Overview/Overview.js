@@ -15,7 +15,7 @@ function Overview({ event, index }) {
             {moment(event.dateVenue + ' ' + event.timeVenueUTC).format('LT')}
           </p>
           <p>
-            Home Team: {event.homeTeam?.teamCountryCode}
+            Home Team: {event.homeTeam?.teamCountryCode}{' '}
             {event.homeTeam && event.homeTeam.name}
             <span className="ms-3">
               Goals:
